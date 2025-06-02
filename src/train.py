@@ -11,8 +11,8 @@ os.makedirs("models", exist_ok=True)
 data = pd.read_csv("data/housing.csv")
 
 # Features and target
-X = data[['RM']]  # Or whatever features you want
-y = data['MEDV']
+X = data[['total_rooms']]  # Or whatever features you want
+y = data['median_house_value']
 
 # Split data
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
